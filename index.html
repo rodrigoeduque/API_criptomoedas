@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinMarketCap - Rodrigo</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //Chave
+        var apiKey = {key = 'e8ba6c58-c346-41c9-9f08-fecc89a07d54'}
+            
+        
+
+        //GET Requisição
+        fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=' + apikey.key)
+            .then((response) => {
+                if (!response.ok) throw new Error('Erro ao executar requisição, status ' + response.status);
+                return response.json();
+            })
+            .then((api) => {
+                console.log(api);
+            })
+            .catch((error) => {
+                console.error(error.message);
+            })
+
+            console.log(apiKey);
+    </script>
+</body>
+
+</html>
